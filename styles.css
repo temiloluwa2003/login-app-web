@@ -1,0 +1,409 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #6C5CE7 0%, #5B36E8 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    background: linear-gradient(135deg, #6C5CE7 0%, #5B36E8 100%);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================
+   HEADER SECTION
+   ============================================ */
+
+.header {
+    padding: 30px 25px 25px;
+    text-align: center;
+    color: white;
+}
+
+.rocket-container {
+    position: relative;
+    height: 220px;
+    width: 100%;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Moon */
+.moon {
+    position: absolute;
+    left: 20px;
+    top: 65px;
+    height: 45px;
+    width: 45px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+}
+
+/* Star */
+.star {
+    position: absolute;
+    right: 45px;
+    top: 55px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 8px;
+}
+
+/* Rocket */
+.rocket {
+    font-size: 100px;
+    color: white;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Flame */
+.flame {
+    height: 25px;
+    width: 15px;
+    background: linear-gradient(to bottom, #FF8C00, #FF4500);
+    border-radius: 20px;
+    margin-top: 5px;
+    animation: flicker 0.3s ease-in-out infinite;
+}
+
+@keyframes flicker {
+    0%, 100% {
+        height: 25px;
+        opacity: 1;
+    }
+    50% {
+        height: 30px;
+        opacity: 0.8;
+    }
+}
+
+/* Cloud */
+.cloud {
+    display: flex;
+    gap: -10px;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.cloud-circle {
+    height: 45px;
+    width: 45px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 50%;
+    margin: 0 -10px;
+}
+
+.cloud-circle:nth-child(2) {
+    height: 60px;
+    width: 60px;
+}
+
+.header h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.header p {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* ============================================
+   FORM SECTION
+   ============================================ */
+
+.form-container {
+    background-color: #F8F8FC;
+    padding: 30px 25px;
+    border-radius: 30px 30px 0 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+    color: #30303A;
+    margin-bottom: 8px;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-wrapper i {
+    position: absolute;
+    left: 15px;
+    color: #999;
+    font-size: 18px;
+    pointer-events: none;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 17px 15px 17px 45px;
+    border: 1.5px solid #D9D9E2;
+    border-radius: 12px;
+    font-size: 14px;
+    background-color: #F8F8FC;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #6C5CE7;
+    box-shadow: 0 0 8px rgba(108, 92, 231, 0.2);
+}
+
+.form-group input::placeholder {
+    color: #55555F;
+}
+
+/* Toggle Password Button */
+.toggle-password {
+    position: absolute;
+    right: 15px;
+    background: none;
+    border: none;
+    color: #999;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px;
+    transition: color 0.3s ease;
+}
+
+.toggle-password:hover {
+    color: #6C5CE7;
+}
+
+/* Forgot Password */
+.forgot-password {
+    text-align: right;
+    margin-bottom: 15px;
+}
+
+.forgot-password button {
+    background: none;
+    border: none;
+    color: #4F2FD4;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.forgot-password button:hover {
+    opacity: 0.8;
+}
+
+/* Login Button */
+.login-btn {
+    width: 100%;
+    padding: 17px;
+    background-color: #5B36E8;
+    color: white;
+    border: none;
+    border-radius: 14px;
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 15px rgba(91, 54, 232, 0.3);
+}
+
+.login-btn:hover {
+    background-color: #4a2bd4;
+    transform: translateY(-2px);
+}
+
+.login-btn:active {
+    transform: translateY(0);
+}
+
+/* ============================================
+   DIVIDER
+   ============================================ */
+
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 25px 0;
+    color: #55555F;
+    font-size: 14px;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background-color: #D9D9E2;
+}
+
+/* ============================================
+   SOCIAL BUTTONS
+   ============================================ */
+
+.social-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px;
+    border: 1.5px solid #D9D9E2;
+    background-color: #F8F8FC;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+    background-color: #fff;
+    border-color: #6C5CE7;
+}
+
+.social-icon {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.google-btn .social-icon {
+    color: #DC3545;
+}
+
+.apple-btn .social-icon {
+    color: #000;
+}
+
+/* ============================================
+   SIGN UP TEXT
+   ============================================ */
+
+.signup-text {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.signup-text p {
+    font-size: 14px;
+    color: #55555F;
+}
+
+.signup-link {
+    background: none;
+    border: none;
+    color: #4F2FD4;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+    transition: opacity 0.3s ease;
+}
+
+.signup-link:hover {
+    opacity: 0.8;
+}
+
+/* ============================================
+   TOAST MESSAGE
+   ============================================ */
+
+.toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(150px);
+    background-color: #333;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-size: 14px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    max-width: 90%;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.toast.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 600px) {
+    .container {
+        max-width: 100%;
+        border-radius: 20px;
+    }
+
+    .header h1 {
+        font-size: 24px;
+    }
+
+    .header p {
+        font-size: 14px;
+    }
+
+    .rocket-container {
+        height: 180px;
+    }
+
+    .rocket {
+        font-size: 80px;
+    }
+
+    .form-container {
+        padding: 25px 20px;
+    }
+
+    .form-group input {
+        font-size: 14px;
+    }
+
+    .social-buttons {
+        grid-template-columns: 1fr 1fr;
+    }
+}
