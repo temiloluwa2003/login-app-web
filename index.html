@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flutter Login - Web Version</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+            <div class="rocket-container">
+                <!-- Moon -->
+                <div class="moon"></div>
+                
+                <!-- Star -->
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                </div>
+                
+                <!-- Rocket -->
+                <div class="rocket">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                
+                <!-- Flame -->
+                <div class="flame"></div>
+                
+                <!-- Cloud -->
+                <div class="cloud">
+                    <div class="cloud-circle"></div>
+                    <div class="cloud-circle"></div>
+                    <div class="cloud-circle"></div>
+                </div>
+            </div>
+            
+            <h1>Welcome Back 👋</h1>
+            <p>Login to continue your journey</p>
+        </div>
+
+        <!-- Login Form Section -->
+        <div class="form-container">
+            <form id="loginForm">
+                <!-- Email Field -->
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-envelope"></i>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            placeholder="hello@flutter.dev" 
+                            required
+                        >
+                    </div>
+                </div>
+
+                <!-- Password Field -->
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-lock"></i>
+                        <input 
+                            type="password" 
+                            id="password" 
+                            placeholder="••••••••" 
+                            required
+                        >
+                        <button 
+                            type="button" 
+                            class="toggle-password" 
+                            id="togglePassword"
+                        >
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Forgot Password -->
+                <div class="forgot-password">
+                    <button type="button" id="forgotBtn">Forgot Password?</button>
+                </div>
+
+                <!-- Login Button -->
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+
+            <!-- Divider -->
+            <div class="divider">
+                <span>or continue with</span>
+            </div>
+
+            <!-- Social Buttons -->
+            <div class="social-buttons">
+                <button class="social-btn google-btn" id="googleBtn">
+                    <span class="social-icon">G</span>
+                    <span>Google</span>
+                </button>
+                <button class="social-btn apple-btn" id="appleBtn">
+                    <span class="social-icon">●</span>
+                    <span>Apple</span>
+                </button>
+            </div>
+
+            <!-- Sign Up -->
+            <div class="signup-text">
+                <p>Don't have an account? 
+                    <button type="button" id="signupBtn" class="signup-link">Sign Up</button>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Message -->
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
